@@ -7,10 +7,18 @@ Increment the large integer by one and return the resulting array of digits.'''
 
 class Solution:
     def plusOne(self, digits: list[int]) -> list[int]:
-        newl={}
-        for i in digits:
-            newl +=str(i)
-        return newl
+        result=0
+        empty=[]
+        for char in digits:
+            result=result*10+char
+        newres= result+1
+
+        while newres>0:
+            empty.insert(0,newres%10)
+            newres//=10
+        return empty
+
+
 
 digits=[1,2,3]
 obj=Solution()

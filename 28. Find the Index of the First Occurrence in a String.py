@@ -12,14 +12,20 @@ The first occurrence is at index 0, so we return 0.'''
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        lnedle=len(needle)
-        # print(lnedle)
-        if haystack[:lnedle] == needle:
-            return 1
+        # if needle in haystack:
+        #     return haystack.index(needle)
+        # else:
+        #     return -1
+        n=len(needle)
+        hn=len(haystack)
+
+        for i in range((hn-(n))+1):
+            if haystack[i:i+n]==needle:
+                return i
         else:
             return -1
 
-haystack = "sadofsad"
+haystack = "dfhdursadofsad"
 needle = "sad"
 obj=Solution()
 result=obj.strStr(haystack,needle)
