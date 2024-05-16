@@ -16,11 +16,6 @@ class Node:
             self.next = new_node
         def insertAny(self,head,index):
             new_node=Node(head)
-
-
-
-
-
 node1 = Node(1)
 node2 = Node(2)
 node3 = Node(3)
